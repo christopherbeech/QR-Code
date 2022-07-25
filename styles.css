@@ -1,26 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 * {
+
     margin: 0;
     padding: 0;
     font-family: 'Outfit';
+    box-sizing: border-box;
+    
 }
 
 body {
 
     background: hsl(212, 45%, 89%);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: minmax(470, auto);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 
 }
 
 .card {
 
-    grid-column: 2/5;
     border-radius: 15px;
     width: 300px;
     height: 470px;
-    margin: 200px auto;
     background-color: #fff;
 
 }
@@ -67,35 +70,19 @@ p {
 
 .attribution {
 
-    grid-column: 2/5;
     text-align: center;
     line-height: 24px;
+    padding: 20px;
+    margin-top: 25px;
+
 }
 
 @media ( max-width: 500px) {
+
     body {
 
         background: hsl(212, 45%, 89%);
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: minmax(470, auto);
     
-    }
-
-    .card {
-
-        grid-column: 1;
-
-    }
-
-    .attribution {
-
-        grid-column: 1;
-
-    }
-
-    .attribution{
-        margin-bottom: 15px;
     }
    
 }
